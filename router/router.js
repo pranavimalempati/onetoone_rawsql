@@ -3,12 +3,13 @@ const Service = require("../controller/controller");
 const router = require("express").Router();
 
 router.post("/insert", Service.add);
-router.put("/updateemp", Service.updateemp);
-router.put("/updatedept", Service.updatedept);
-router.delete("/deletedept/:dept_id", Service.deletedept);
-router.delete("/deleteemp/:emp_id", Service.deleteemp);
-router.get("/findid/:dept_id", Service.findBydeptId);
-router.get("/find", Service.findAll);
+router.post("/find", Service.find);
+
+router.put("/update", Service.update);
+// router.put("/updatedept", Service.updatedept);
+router.delete("/delete", Service.remove);
+// router.delete("/deleteemp/:emp_id", Service.deleteemp);
+// router.get("/find", Service.findAll);
 
 
 
